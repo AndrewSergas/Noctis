@@ -2,6 +2,10 @@
 
 Noctis is a recognition system for online handwritten signature verification based on a  statistical approach developed during the Security course @ [University of Bari "Aldo Moro"](http://www.uniba.it) @ [Department of Computer Science](http://www.uniba.it/ricerca/dipartimenti/informatica). See more @ [presentation.pdf](https://github.com/MrNobody1992/Noctis/presentation.pdf).
 
+## Prerequisites
+
+To run the software you must extract the [SUSIG](http://biometrics.sabanciuniv.edu/susig.html) dataset folder from the SUSIG.rar archive.
+
 ## Authors
 
 This software has been developed with the contribution of [**Donato Meoli**](https://github.com/DonatoMeoli).
