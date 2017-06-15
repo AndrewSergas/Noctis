@@ -5,13 +5,13 @@ else
 end
 
 % Getting .mat file's size
-matObject = matfile(strcat(fileparts(pwd), slash, 'workspace.mat'));
+matObject = matfile(strcat(fileparts(pwd), slash, 'Data.mat'));
 infoMat = whos(matObject);
 sizeMat = infoMat.bytes;
 sizeMat = sizeMat / 1000000;
 
 % Getting variables' size
-load(strcat(fileparts(pwd), slash, 'workspace.mat'));
+load(strcat(fileparts(pwd), slash, 'Data.mat'));
 infoSVMStruct1 = whos('SVMStruct1');
 infoSVMStruct2 = whos('SVMStruct2');
 infoThresholds1 = whos('thresholds1');

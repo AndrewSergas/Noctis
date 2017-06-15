@@ -68,4 +68,5 @@ totalTime = timestamp(sizeFeatures) - timestamp(1);
 sigFeatures = [displacementMean, velocityMean, accelerationMean, anglesMean, pressureMean, timeMean, originAnglesMean,...
     displacementDev, velocityDev, accelerationDev, anglesDev, pressureDev, timeDev, originAnglesDev, pathLength, totalTime];
 
+
 end

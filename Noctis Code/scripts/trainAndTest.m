@@ -18,7 +18,7 @@ thresholds2 = transpose(thresholds);
 
 % Writing an .xls file with FRRs and FARs
 excel = excelSheet(usersFRR, usersFAR, scoresGenuine1, scoresGenuine2, scoresForgery1, scoresForgery2, thresholds1, thresholds2);
-excelPath = strcat(fileparts(pwd), slash, 'results');
+excelPath = strcat(fileparts(pwd), slash, 'Noctis Results');
 xlswrite(excelPath, excel);
 
 % Elapsed time
@@ -40,7 +40,7 @@ fprintf('Total FRR: %.2f%%.\n', mean(usersFRR) * 100);
 fprintf('Total FAR: %.2f%%.\n\n', mean(usersFAR) * 100);
 
 % Saving SVMs and thresholds
-save(strcat(fileparts(pwd), slash, 'workspace.mat'), 'SVMStruct1', 'SVMStruct2', 'thresholds1', 'thresholds2');
+save(strcat(fileparts(pwd), slash, 'Data.mat'), 'SVMStruct1', 'SVMStruct2', 'thresholds1', 'thresholds2');
 
 % Clearing workspace
 clear variables;

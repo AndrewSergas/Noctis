@@ -8,13 +8,12 @@
 %> @author Andrea Sergas Donato Meoli
 function [ SVM, threshold ] = userSVM( userFeatures )
 
-range = linspace(1, 1.4, 9);
-genFeatures = genuineFeatures(userFeatures, range);
-forgFeatures = forgeryFeatures(genFeatures);
-sizeGenuine = size(genFeatures);
-class = ones(sizeGenuine(1), 1);
+sizeUserFeatures = size(userFeatures);
+sizeUserFeatures = sizeUserFeatures(1);
+forgFeatures = forgeryFeatures(userFeatures);
+class = ones(sizeUserFeatures, 1);
 
-SVM = fitcsvm(genFeatures, class, 'KernelScale', 'auto', 'Standardize', true);
+SVM = fitcsvm(userFeatures, class, 'KernelScale', 'auto', 'Standardize', true);
 [~, scoresForgery] = predict(SVM, forgFeatures);
 threshold = max(scoresForgery) + 1e-7;
 SVM = compact(SVM);

@@ -2,7 +2,7 @@
 tic;
 
 % Loading SVMs and threholds
-load(strcat(fileparts(pwd), '\workspace.mat'));
+load(strcat(fileparts(pwd), '\Data.mat'));
 
 % Elapsed laoding time
 totalTime = toc;
